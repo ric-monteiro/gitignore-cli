@@ -1,0 +1,8 @@
+pyproject.toml
+src/gi_tool/main.py
+src/gitignore_generator_cli.egg-info/PKG-INFO
+src/gitignore_generator_cli.egg-info/SOURCES.txt
+src/gitignore_generator_cli.egg-info/dependency_links.txt
+src/gitignore_generator_cli.egg-info/entry_points.txt
+src/gitignore_generator_cli.egg-info/requires.txt
+src/gitignore_generator_cli.egg-info/top_level.txt

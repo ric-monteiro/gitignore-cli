@@ -1,0 +1,6 @@
+pyproject.toml
+src/gi_tool/main.py
+src/gi_tool.egg-info/PKG-INFO
+src/gi_tool.egg-info/SOURCES.txt
+src/gi_tool.egg-info/dependency_links.txt
+src/gi_tool.egg-info/top_level.txt
