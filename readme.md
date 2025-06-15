@@ -1,6 +1,6 @@
 # gitignore CLI
 
-A simple command-line tool to automatically generate `.gitignore` files files using templates from [gitignore.io](https://www.toptal.com/developers/gitignore/).
+A simple command-line tool to automatically generate `.gitignore` files using templates from [gitignore.io](https://www.toptal.com/developers/gitignore/).
 
 ## Installation
 
