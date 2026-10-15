@@ -1,2 +1,0 @@
-[console_scripts]
-ign = gi_tool.main:generate

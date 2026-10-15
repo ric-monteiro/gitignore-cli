@@ -4,7 +4,7 @@ A simple command-line tool to automatically generate `.gitignore` files using te
 
 ## Installation
 
-To install and use this tool locally:
+Requires Python 3.9+.
 
 ### 1. Clone the repository
 ```bash
@@ -23,12 +23,40 @@ pip install -e .
 
 ## Usage
 
-After installation, the `ign` command will be globally available in your terminal.
+After installation, the `ign` command will be available in your terminal.
 
-
-### Example: generate a .gitignore for a Node.js and React project
+### Generate a .gitignore for a Node.js and React project
 ```bash
-ign node react visualstudiocode > .gitignore
+ign node react visualstudiocode -o .gitignore
+```
+
+`-o/--output` always writes UTF-8 with LF line endings and refuses to overwrite an existing file. Use `--force` to replace it, or `--append` to add templates to it:
+
+```bash
+ign go -o .gitignore --append
+```
+
+Template names can also be comma-separated (`ign node,react`), and printing to standard output still works (`ign python > .gitignore`).
+
+> **Windows / PowerShell 5:** prefer `-o` over `>`. PowerShell 5 redirects output as UTF-16, which Git cannot read, so the resulting `.gitignore` is silently ignored.
+
+### Find templates
+```bash
+ign --list          # all available templates
+ign --list java     # templates whose name contains "java"
+```
+
+### Other options
+```
+-h, --help     Show help
+-V, --version  Show version
+```
+
+## Development
+
+```bash
+pip install -e ".[test]"
+pytest
 ```
 
 ## License
