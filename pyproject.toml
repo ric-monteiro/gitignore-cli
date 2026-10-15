@@ -1,14 +1,29 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "gitignore-generator-cli"
-version = "0.1.0"
+dynamic = ["version"]
+description = "Generate .gitignore files from gitignore.io templates"
+readme = "readme.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ricardo Monteiro" }]
+requires-python = ">=3.9"
 dependencies = [
-    "click",
-    "requests",
+    "click>=8.1",
+    "requests>=2.32.4",
 ]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/ric-monteiro/gitignore-cli"
 
 [project.scripts]
 ign = "gi_tool.main:generate"
+
+[tool.setuptools.dynamic]
+version = { attr = "gi_tool.__version__" }
